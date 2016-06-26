@@ -1,0 +1,223 @@
+
+
+body{
+    background: #776B5D;
+}
+.top-bar{
+	position: fixed;
+	z-index: 2;
+}
+.nav-bar-div{
+	height: 58px;
+    padding: 13px 0px;
+    background: #776d5d;
+    border: none;	
+}
+.people-img-div{
+	
+}
+.people-img-div img{
+	   width: 35px;
+    height: 35px;
+    border-radius: 50%;	
+    border: 2px solid #fff;
+
+}
+.clearfix{
+	overflow: hidden;
+	clear: both;
+}
+.contact-details-div{
+	position: relative;
+	height: 70px;
+	padding: 20px 12px;
+}
+img{
+	width: 35px;
+    height: 35px;
+    border-radius: 50%;	
+}
+
+.input-box-div{
+	position: relative;
+    width: 100%;
+    color: #bcbcbc;
+    height: 34px;
+    border-radius: 23px;
+    padding: 1px 1px 4px 13px;
+    border: 1px solid;
+}
+.search-frnds-input-box{
+	width: 85%;
+	height: 31px;
+	outline: none;
+	border: none;
+	font-size: 20px;
+}
+.alternate-class-for-details-contact-div{
+    background: #F9F9F9;
+}
+.nav-tab-link{
+  position: relative;
+	width: 25%;
+    text-align: center;
+    border-right: 1px dotted #fff;
+    height: 51px;
+    padding-top: 6px;
+}
+nav-tab-link :last-child{
+  border-right: none;
+}
+.nav-tab-link a{
+	color: #fff;
+	text-decoration: none;
+
+}
+.nav-tabs > li > a {
+    margin-right: 0px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 0px;
+    background: none !important;
+}
+
+.pentagon {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 108px;
+  position: relative;
+  top: 131px;
+  border: 36px solid rgba(0,0,0,0);
+  border-top: 100px solid #1abc9c;
+  border-bottom: 0 solid #1abc9c;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+
+.pentagon::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  bottom: 100px;
+  left: -36px;
+  border: 90px solid rgba(0,0,0,0);
+  border-bottom: 70px solid #1abc9c;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: none;
+}
+
+
+#map {
+    height:420px;
+    width:100%;
+}
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #f00;
+}
+
+.selected{
+position: absolute;
+    top: 44px;
+    /* right: 0px; */
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #f47564 transparent transparent transparent;
+}
+
+.top-bar-icons-class{
+    display: inline-block;
+    margin: 7px 0px 0px 7px;
+    padding: 2px 4px 0px 5px;
+    width: 21px;
+    height: 20px;
+    color: #fff;
+    border-radius: 3px;
+    background: #7F7365;
+    box-shadow: 0px 0px 5px 2px #696055;
+}
+.custom-badge-class{
+  position: absolute;
+  top: 5px;
+  padding: 5px 7px;
+  font-size: 10px;
+  background-color: #f47564;
+}
+.like-font-awesome-custom{
+      display: inline-block;
+    color: #fff;
+    background: #8ED8D7;
+    width: 22px;
+    height: 22px;
+    padding-left: 3px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.custom-class-for-contact-name{
+  font-size: 19px;
+    position: relative;
+    top: -6px;
+    left: 9px;
+    color: #f47564;
+}
+.custom-class-for-contact-name-child{
+      position: absolute;
+    width: 116px;
+    top: 21px;
+    left: 2px;
+    font-size: 12px;
+    color: #969495;
+}
+.img-contact-detail img{
+      margin: 12px;
+    width: 80%;
+    height: 250px;
+    border-radius: 4px;
+    border: 3px solid #000;
+}
+
+.backGround{
+  color: #59b759;
+}
+.errorMsgBlock{
+  font-size: 20px;
+    color: #a74e4e;
+    margin: 58px 10px;
+}
+
+.all-team-class{
+      margin: 15px 0px;
+    border: 2px solid #f47564;
+    font-size: 20px;
+
+}
+

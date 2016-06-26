@@ -1,0 +1,53 @@
+<div class="clearfix">
+		<nav class="navbar navbar-default top-bar nav-bar-div" style="width: 100%">
+		<div class="navbar-header" style="padding-bottom: 7px;">
+			<div class="container-fluid">
+				<div class="pull-left people-img-div">
+					<img src="images/sachin.jpg" alt="Human Img"> 
+					<span class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="border: none; background: none;color: #fff;outline: none;">David Taylor
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="">My Profile</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="">Sign Out</a></li>
+						</ul>
+					</span>
+				</div>
+				<div class="pull-right">
+					<div class="top-bar-icons-class">
+						<i class="fa fa-comments" aria-hidden="true"></i>
+					</div>
+					<div class="top-bar-icons-class">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+						<span class="badge custom-badge-class">2</span>
+					</div>
+					<div class="top-bar-icons-class">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	</div>
+
+	<section class="clearfix" style="background: #fff; height: {{contactDeatilsWidth}}px; z-index: 1;width: 100%;margin-top: 65px;">
+		<div class="container text-center" ng-if="details">
+			<div class="img-contact-detail">
+				<img ng-src="{{img}}">
+			</div>
+			<div>
+				<strong>Email : </strong>{{details.email}}
+			</div>
+			<div>
+				<strong>Location : </strong>{{details.location}}
+			</div>
+		</div>
+
+		<div class="container text-center errorMsgBlock" ng-if="!details">
+			No Details Available,<br> Please save the details first  by clicking on plus button,
+			<br> If Plus button is not visible please click on chek button and then plus button will appear.
+		</div>
+		
+	</section>

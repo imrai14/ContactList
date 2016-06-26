@@ -1,0 +1,180 @@
+ 	<div class="clearfix">
+		<nav class="navbar navbar-default top-bar nav-bar-div" style="width: 100%">
+		<div class="navbar-header" style="padding-bottom: 7px;">
+			<div class="container-fluid">
+				<div class="pull-left people-img-div">
+					<img src="images/sachin.jpg" alt="Human Img"> 
+					<span class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="border: none; background: none;color: #fff;outline: none;">David Taylor
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="">My Profile</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="">Sign Out</a></li>
+						</ul>
+					</span>
+				</div>
+				<div class="pull-right">
+					<div class="top-bar-icons-class">
+						<i class="fa fa-comments" aria-hidden="true"></i>
+					</div>
+					<div class="top-bar-icons-class">
+						<i class="fa fa-globe" aria-hidden="true"></i>
+						<span class="badge custom-badge-class">2</span>
+					</div>
+					<div class="top-bar-icons-class">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="" style="background: #F47564;height: 51px;">
+			<ul class="nav nav-tabs">
+			  <li class="nav-tab-link"><a href ng-click="setTab(1)">All<span ng-class="{ selected: isSet(1)}"></span></a></li>
+			  <li class="nav-tab-link"><a href ng-click="setTab(2)">Athletes<span ng-class="{ selected: isSet(2)}"></a></li>
+			  <li class="nav-tab-link"><a href ng-click="setTab(3)">Fans<span ng-class="{ selected: isSet(3)}"></a></li>
+			  <li class="nav-tab-link"><a href ng-click="setTab(4)">Teams<span ng-class="{ selected: isSet(4)}"></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	</div>
+<section id="myModal1" class="clearfix" style="background: #fff; height: {{contactDeatilsWidth}}px; z-index: 1;width: 100%;margin-top: 98px;overflow: scroll;" ng-show="isSet(1)">
+	
+	<div class="col-md-12 contact-details-div">
+		<div class="input-box-div">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="search-frnds-input-box" placeholder="Search Friends" ng-model="searchText">
+			<i class="fa fa-refresh" aria-hidden="true"></i>
+		</div>
+	</div>
+	
+	<div class="col-md-12 contact-details-div" ng-repeat="list in contactArrayLists | filter:searchText" ng-class="{ 'alternate-class-for-details-contact-div' : list.flag}">
+		<span class="like-font-awesome-custom">
+			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+		</span>
+		<span>
+			<img ng-src="{{list.img}}" alt="Human Img">
+		</span>
+		<span class="custom-class-for-contact-name" ng-click="fetchDetails(list.name, list.img)">
+			{{list.name}}
+			<span class="custom-class-for-contact-name-child"><i class="fa fa-briefcase" aria-hidden="true"></i>
+ 				{{list.post}}
+ 			</span>
+		</span>
+		<span ng-if="!list.flag" class="pull-right" style="font-size: 27px;color: #bfb4b4;margin-right:9px;" ng-click="checkBoxClicked($index)">
+			<i class="fa fa-check-square {{'icon'+ ($index)}}" aria-hidden="true"></i>
+		</span>
+		<span ng-if="list.flag" class="pull-right" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+		<span  class="pull-right {{'iconPlus'+ ($index)}} hide" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+
+		   
+	</div>
+	</section>
+
+
+<section id="myModal1" class="clearfix" style="background: #fff; height: {{contactDeatilsWidth}}px; z-index: 1;width: 100%;margin-top: 98px;" ng-show="isSet(2)">
+	
+	<div class="col-md-12 contact-details-div">
+		<div class="input-box-div">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="search-frnds-input-box" placeholder="Search Athletes" ng-model="searchText">
+			<i class="fa fa-refresh" aria-hidden="true"></i>
+		</div>
+	</div>
+	
+	<div class="col-md-12 contact-details-div" ng-repeat="list in contactArrayLists | filter:searchText" ng-class="{ 'alternate-class-for-details-contact-div' : list.flag}" ng-if="list.post == 'Tennis Player' || list.post == 'Great Man' || list.post == 'Cricketer'">
+		<span class="like-font-awesome-custom">
+			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+		</span>
+		<span>
+			<img ng-src="{{list.img}}" alt="Human Img">
+		</span>
+		<span class="custom-class-for-contact-name" ng-click="fetchDetails(list.name, list.img)">
+			{{list.name}}
+			<span class="custom-class-for-contact-name-child"><i class="fa fa-briefcase" aria-hidden="true"></i>
+ 				{{list.post}}
+ 			</span>
+		</span>
+		<span ng-if="!list.flag" class="pull-right" style="font-size: 27px;color: #bfb4b4;margin-right:9px;" ng-click="checkBoxClicked($index)">
+			<i class="fa fa-check-square {{'icon'+ ($index)}}" aria-hidden="true"></i>
+		</span>
+		<span ng-if="list.flag" class="pull-right" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+		<span  class="pull-right {{'iconPlus'+ ($index)}} hide" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+
+		   
+	</div>
+	</section>
+
+	<section id="myModal1" class="clearfix" style="background: #fff; height: {{contactDeatilsWidth}}px; z-index: 1;width: 100%;margin-top: 98px;" ng-show="isSet(3)">
+	
+	<div class="col-md-12 contact-details-div">
+		<div class="input-box-div">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="search-frnds-input-box" placeholder="Search Fans" ng-model="searchFans">
+			<i class="fa fa-refresh" aria-hidden="true"></i>
+		</div>
+	</div>
+	
+	<div class="col-md-12 contact-details-div" ng-repeat="list in contactArrayLists | filter:searchFans" ng-class="{ 'alternate-class-for-details-contact-div' : list.flag}" ng-if="list.fan">
+		<span class="like-font-awesome-custom">
+			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+		</span>
+		<span>
+			<img ng-src="{{list.img}}" alt="Human Img">
+		</span>
+		<span class="custom-class-for-contact-name" ng-click="fetchDetails(list.name, list.img)">
+			{{list.name}}
+			<span class="custom-class-for-contact-name-child"><i class="fa fa-briefcase" aria-hidden="true"></i>
+ 				{{list.post}}
+ 			</span>
+		</span>
+		<span ng-if="!list.flag" class="pull-right" style="font-size: 27px;color: #bfb4b4;margin-right:9px;" ng-click="checkBoxClicked($index)">
+			<i class="fa fa-check-square {{'icon'+ ($index)}}" aria-hidden="true"></i>
+		</span>
+		<span ng-if="list.flag" class="pull-right" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+		<span  class="pull-right {{'iconPlus'+ ($index)}} hide" style="color: #FB8172;font-size: 27px;margin-right: 9px;" data-toggle="modal" ng-click="showModal(list.name)">
+			<i class="fa fa-plus-square" aria-hidden="true"></i>
+		</span>
+
+		   
+	</div>
+	</section>
+
+
+	<section id="myModal1" class="clearfix" style="background: #fff; height: {{contactDeatilsWidth}}px; z-index: 1;width: 100%;margin-top: 98px;overflow: scroll;" ng-show="isSet(4)">
+	
+	<div class="col-md-12 contact-details-div">
+		<div class="input-box-div">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" class="search-frnds-input-box" placeholder="Search Teams" ng-model="searchTeam">
+			<i class="fa fa-refresh" aria-hidden="true"></i>
+		</div>
+	</div>
+	
+	<div class="col-md-12" ng-repeat="tlist in teamLists | filter :searchTeam">
+		<div class="all-team-class">
+			<div><img ng-src="{{tlist.img}}" style="width: 100%;height: 250px;border-radius: 2px; "></div>
+			<div style="padding: 4px;" ><strong>Team Name : </strong> {{tlist.name}}</div>
+			<div style="padding: 4px;"><strong>Play : </strong> {{tlist.gameType}}</div>
+		</div>
+
+		   
+	</div>
+	</section>
+
+<div ng-include="'views/modals.html'"></div>
+
+
+
+
